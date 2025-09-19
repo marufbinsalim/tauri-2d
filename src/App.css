@@ -1,0 +1,87 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  background-color: #e0e0e0;
+  position: relative;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+}
+
+.cell {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #4caf50;
+  cursor: grab;
+  z-index: 10;
+  transition: left 0.1s ease-out, top 0.1s ease-out;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.square:active {
+  cursor: grabbing;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+  .grid {
+    background-color: #444;
+    border-color: #666;
+  }
+
+  .cell {
+    background-color: #555;
+    border-color: #777;
+  }
+
+  .square {
+    background-color: #66bb6a;
+  }
+}
